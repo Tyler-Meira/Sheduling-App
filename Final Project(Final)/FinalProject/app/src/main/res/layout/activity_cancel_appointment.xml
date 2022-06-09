@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CancelAppointment">
+
+    <EditText
+        android:id="@+id/editCancelPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="57dp"
+        android:ems="10"
+        android:hint="Phone Number"
+        android:inputType="number"
+        android:padding="5sp"
+        android:background="@drawable/custom_input"
+        android:maxLength="11"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnCancelAppointment"
+        app:layout_constraintEnd_toEndOf="@+id/btnCancelAppointment"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="286dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="143dp"
+        android:layout_marginBottom="58dp"
+        android:background="@drawable/custom_input2"
+        android:gravity="center_horizontal"
+        android:text="Cancel Appointment"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/editCancelPhone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnCancelAppointment"
+        android:layout_width="207dp"
+        android:layout_height="64dp"
+        android:layout_marginBottom="343dp"
+        android:onClick="cancelApp"
+        android:text="Cancel Appointment"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editCancelPhone" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/menu"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        android:background="#004FEE"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
